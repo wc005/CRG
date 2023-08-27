@@ -36,7 +36,7 @@ if __name__ == "__main__":
     # 停止训练误差降低阈值
     stop_f = 0.00000001
     dataname = args.data_set
-    path = "../../data/{}/{}.csv".format(dataname, dataname)
+    path = "data/{}/{}.csv".format(dataname, dataname)
     # 测试结果存储结构
     results_class = wpf_data_ID1()
     for steps, item in product(args.step_list, results_class.item_list):
