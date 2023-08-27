@@ -48,8 +48,6 @@ def getset(data, RNN_len, batch_size):
         shuffle=True)
     # 验证集
     val_count = int(len(x_data) / 10 * 8)
-    # val_x = x_data[val_count-2:val_count, ]
-    # val_y = y_data[val_count-2:val_count, ]
     val_x = x_data[train_count:val_count, ]
     val_y = y_data[train_count:val_count, ]
     val_dataset = Data.TensorDataset(torch.from_numpy(val_x), torch.from_numpy(val_y))
@@ -63,4 +61,3 @@ def getset(data, RNN_len, batch_size):
         batch_size=batch_size,
         shuffle=True)
     return trainload, valload, testload
-    # return trainload, testload
